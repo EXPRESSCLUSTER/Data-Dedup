@@ -34,7 +34,9 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 2. Click **File and Storage Services**.
 3. Click on **Volumes**.
 4. Right-click on the volume to apply Data Deduplication and select **Configure Data Deduplication...**
-
+      <p align="center">
+      <img src="Data Deduplication - Configure.png">
+      </p> 
 5. Data Deduplication is currently disabled. Select **General purpose file server** under **Data deduplication** to enable it.
 6. Set the **Deduplicate files older than (in days)** setting to **0** (for testing purposes).
 7. Add any extensions to exclude from deduplication.    
@@ -48,5 +50,6 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
       <img src="Data Dedup Schedule.png">
       </p> 
 
+**NOTE**: I believe that the settings from the main configuration page must be saved to the disk since changes made while on the mirror disk of the Primary server are also visible from the Data Deduplication configuration page on the Standby server. Changes made on the Scheduling page don't seem to work the same way. Scheduling changes need to be done on each server.
 
 ## Testing
