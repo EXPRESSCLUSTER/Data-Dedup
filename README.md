@@ -52,4 +52,8 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 
 **NOTE**: I believe that the settings from the main configuration page must be saved to the disk since changes made while on the mirror disk of the Primary server are also visible from the Data Deduplication configuration page on the Standby server. Changes made on the Scheduling page don't seem to work the same way. Scheduling changes need to be done on each server.
 
+   <p align="center">
+   <img src="Data Deduplication - Enabled.png">
+   </p>
+
 ## Testing
