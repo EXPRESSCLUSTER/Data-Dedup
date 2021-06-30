@@ -31,6 +31,12 @@ More information on installing is [here](https://docs.microsoft.com/en-us/window
 2. Click **File and Storage Services**.
 3. Click on **Volumes**.
 4. Right-click on the volume to apply Data Deduplication and select **Configure Data Deduplication...**
-5. 
+
+5. Data Deduplication is currently disabled. Select **General purpose file server** under **Data deduplication** to enable it.
+6. Set the **Deduplicate files older than (in days)** setting to **0** (for testing purposes).
+7. Add any extensions to exclude from deduplication.    
+   .edb and .jrs files are already excluded. It is best to exclude database files or log files which are updated frequently.
+8. Add any folders to be excluded from deduplication.
+9. Set a Deduplication Schedule if desired. 
 
 ## Testing
