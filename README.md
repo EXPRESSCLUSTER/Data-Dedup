@@ -66,7 +66,7 @@ Manually run data deduplication:
       
       e.g. Start-DedupJob -Type Optimization -Volume "X:" -Memory 100 -Cores 100 -Priority High
 ````
-View deduplication progress:
+View deduplication progress of active and queued jobs:
 ````
       PS C:\>Get-DedupJob
 ````
