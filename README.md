@@ -23,6 +23,7 @@ A file server often will have redundant files stored across its volume. Data Ded
 3. Expand **File and Storage Services**.
 4. Expand **File and iSCSI Services**.
 5. Check **Data Deduplication**.
+
 6. Click **Next** until the **Install** button is visible and install.    
 More information on installing is [here](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/install-enable).
 
@@ -36,7 +37,7 @@ More information on installing is [here](https://docs.microsoft.com/en-us/window
 6. Set the **Deduplicate files older than (in days)** setting to **0** (for testing purposes).
 7. Add any extensions to exclude from deduplication.    
    .edb and .jrs files are already excluded. It is best to exclude database files or log files which are updated frequently.
-8. Add any folders to be excluded from deduplication.
-9. Set a Deduplication Schedule if desired. 
+8. Add any folders to be **excluded** from deduplication.
+9. Set a **Deduplication Schedule** if desired. 
 
 ## Testing
