@@ -23,9 +23,11 @@ A file server often will have redundant files stored across its volume. Data Ded
 3. Expand **File and Storage Services**.
 4. Expand **File and iSCSI Services**.
 5. Check **Data Deduplication**.
-
+      <p align="center">
+      <img src="Data Deduplication Role Install.png">
+      </p> 
 6. Click **Next** until the **Install** button is visible and install.    
-More information on installing is [here](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/install-enable).
+Note: More information on installing is [here](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/install-enable).
 
 ## Enable and Configure Data Deduplication
 1. Open the **Server Manager** dashboard.
