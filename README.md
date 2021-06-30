@@ -70,3 +70,21 @@ View deduplication progress:
 ````
       PS C:\>Get-DedupJob
 ````
+Check the status of the most recent job:
+````
+      PS C:\>Get-DedupStatus
+````
+Look at the following fields:
+- For the Optimization job, look at LastOptimizationResult (0 = Success), LastOptimizationResultMessage, and LastOptimizationTime (should be recent).
+- For the Garbage Collection job, look at LastGarbageCollectionResult (0 = Success), LastGarbageCollectionResultMessage, and LastGarbageCollectionTime (should be recent).
+- For the Integrity Scrubbing job, look at LastScrubbingResult (0 = Success), LastScrubbingResultMessage, and LastScrubbingTime (should be recent).    
+    
+Also see
+- OptimizedFilesSavingsRate applies only to the files that are 'in-policy' for optimization (space used by optimized files after optimization / logical size of optimized files).
+- SavingsRate applies to the entire volume (space used by optimized files after optimization / total logical size of the optimization).
+
+   <p align="center">
+   <img src="Dedup Volume.png">
+	Data Deduplication has occurred on the volume.
+   </p>
+
