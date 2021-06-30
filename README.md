@@ -88,3 +88,40 @@ Also see
 	Data Deduplication has occurred on the volume.
    </p>
 
+### Sample Output
+````
+PS C:\> Get-DedupStatus
+
+
+FreeSpace    SavedSpace   OptimizedFiles     InPolicyFiles      Volume
+---------    ----------   --------------     -------------      ------
+2.83 GB      1.13 GB      12                 12                 X:
+
+
+PS C:\> Get-DedupStatus | fl
+
+
+Volume                             : X:
+VolumeId                           : \\?Volume{4ec4ab8d-0000-0000-0000-104000000000}\
+Capacity                           : 4 GB
+FreeSpace                          : 2.83 GB
+UsedSpace                          : 1.17 GB
+UnoptimizedSize                    : 2.3 GB
+SavedSpace                         : 1.13 GB
+SavingsRate                        : 49 %
+OptimizedFilesCount                : 12
+OptimizedFilesSize                 : 2.06 GB
+OptimizedFilesSavingsRate          : 55 %
+InPolicyFilesCount                 : 12
+InPolicyFilesSize                  : 2.06 GB
+LastOptimizationTime               : 6/30/2021 9:45:08 AM
+LastOptimizationResult             : 0x00000000
+LastOptimizationResultMessage      : The operation completed successfully.
+LastGarbageCollectionTime          : 6/26/2021 9:45:08 AM
+LastGarbageCollectionResult        : 0x00565302
+LastGarbageCollectionResultMessage : There are no actions associated with this job.
+LastScrubbingTime                  : 6/26/2021 3:45:06 AM
+LastScrubbingResult                : 0x00000000
+LastScrubbingResultMessage         : The operation completed successfully.
+
+````
