@@ -58,7 +58,9 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
    </p>
 
 ## Testing
-The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. **Files must be > 32KB to work**.
+The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. **Files must be larger than 32KB to work**.
+
+\<To do: add more testing info\>
 
 Manually run data deduplication:
 ````
