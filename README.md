@@ -3,6 +3,7 @@ A file server often will have redundant files stored across its volume. Data Ded
 
 ## Tested Configuration
 - Servers: 2 nodes with 2 disks each
-      - 1 Disk for mirroring
-          - 1 Shared disk connected via iSCSI Initiator
+	- 1 Disk for mirroring
+	- 1 Shared disk connected via iSCSI Initiator
 - OS: Windows Server 2019 Standard
+- SW: EXPRESSCLUSTER X v4.3
