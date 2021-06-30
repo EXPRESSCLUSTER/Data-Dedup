@@ -54,6 +54,7 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 
    <p align="center">
    <img src="Data Deduplication - Enabled.png">
+	The volume has Data Deduplication enabled but it has not run yet.
    </p>
 
 ## Testing
