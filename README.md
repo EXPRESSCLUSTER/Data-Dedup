@@ -23,3 +23,7 @@ A file server often will have redundant files stored across its volume. Data Ded
 4. Expand **File and iSCSI Services**.
 5. Check **Data Deduplication**. Click **Next** until the **Install** button is visible and install.    
 More information on installing is [here](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/install-enable).
+
+## Data Deduplication Configuration
+
+## Testing
