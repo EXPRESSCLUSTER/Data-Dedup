@@ -17,7 +17,7 @@ A file server often will have redundant files stored across its volume. Data Ded
 6. Add a shared disk resource (optional)
 
 ## Data Deduplication Setup
-Note: File Server role is required for Data Deduplication. It can be installed at the same time if not installed yet.
+    Note: The File Server role is required for Data Deduplication. It can be installed at the same time if not installed yet.
 1. Open **Server Manager**.
 2. In the **Add Roles and Features** wizard, select **Server Roles**.
 3. Expand **File and Storage Services**.
