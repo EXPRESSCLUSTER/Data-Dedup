@@ -40,6 +40,13 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 7. Add any extensions to exclude from deduplication.    
    .edb and .jrs files are already excluded. It is best to exclude database files or log files which are updated frequently.
 8. Add any folders to be **excluded** from deduplication.
-9. Set a **Deduplication Schedule** if desired. 
+      <p align="center">
+      <img src="My Data Dedup Settings.png">
+      </p> 
+9. Set a **Deduplication Schedule** if desired.
+      <p align="center">
+      <img src="Data Dedup Schedule.png">
+      </p> 
+
 
 ## Testing
