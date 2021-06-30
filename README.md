@@ -59,3 +59,8 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 
 ## Testing
 The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication.
+
+Manually run data deduplication
+````
+      PS C:\>Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 100 -Priority High
+``````
