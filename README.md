@@ -78,6 +78,16 @@ _Result:_
 - OptimizedFilesSavingsRate: 99%    
 - InPolicyFilesCount: 2
 
+### Failover
+I failed over to the Standby server and checked the **Deduplication Rate** and **Deduplication Savings** in _File and Storage Services-\>Volumes_.    
+_Result:_ the numbers matched those on the Primary server.    
+    
+I checked the output from _Get-DedupStatus | fl_    
+_Result:_ the output was identical to the Primary server    
+
+I did a binary file compare of the two identical files I had copied to the volume.    
+_Result:_ no difference
+
 \<To do: add more testing info\>
 
 Manually run data deduplication job:
