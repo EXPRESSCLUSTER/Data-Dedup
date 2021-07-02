@@ -85,9 +85,13 @@ _Result:_ the numbers matched those on the Primary server.
     
 I checked the output from _Get-DedupStatus | fl_    
 _Result:_ the output was identical to the Primary server    
+Note: the **UsedSpace** and **UnOptimizedSize** don't always match up right after failover but the size showing on the Standby server will show up on the Primary server after failback.
 
 I did a binary file compare of the two identical files I had copied to the volume.    
 _Result:_ no difference
+    
+I copied another file twice to the volume and failed back to the Primary server    
+_Result:_ same results as if performing the test on the Primary server and failing over to the Secondary server.    
 
 \<To do: add more testing info\>
 
