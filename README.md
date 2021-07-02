@@ -95,6 +95,8 @@ _Result:_ same results as if performing the test on the Primary server and faili
 
 \<To do: add more testing info\>
 
+## PowerShell Commands
+
 Manually run data deduplication job:
 ````
       PS C:\>Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 100 -Priority High
