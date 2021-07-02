@@ -66,7 +66,7 @@ I created 1K text file on the volume and copied it several times. Result: no opt
 ### File Type Excluded
 I created a 5MB file and copied it several times on the volume. Result: no optimization recorded since file type excluded.
 
-
+### Different File Sizes Larger Than 32KB
 
 \<To do: add more testing info\>
 
