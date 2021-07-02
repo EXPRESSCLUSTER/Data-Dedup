@@ -60,9 +60,17 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 ## Testing
 The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. **Files must be larger than 32KB to work**.
 
+### File Too Small
+I created 1K text file on the volume and copied it several times. Result: no optimization recorded since file was too small
+
+### File Type Excluded
+I created a 5MB file and copied it several times on the volume. Result: no optimization recorded since file type excluded.
+
+
+
 \<To do: add more testing info\>
 
-Manually run data deduplication:
+Manually run data deduplication job:
 ````
       PS C:\>Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 100 -Priority High
       
@@ -75,6 +83,8 @@ View deduplication progress of active and queued jobs:
 Check the status of the most recent job:
 ````
       PS C:\>Get-DedupStatus
+        or for more info
+      PS C:\>Get-DedupStatus | fl
 ````
 Look at the following fields:
 - For the Optimization job, look at LastOptimizationResult (0 = Success), LastOptimizationResultMessage, and LastOptimizationTime (should be recent).
