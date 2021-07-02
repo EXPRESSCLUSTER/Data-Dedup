@@ -61,13 +61,22 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
 The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. **Files must be larger than 32KB to work**.
 
 ### File Too Small
-I created 1K text file on the volume, copied it two times, and manually ran a dedup job. Result: no optimization recorded since file was too small
+I created 1K text file on the volume, copied it two times, and manually ran a dedup job.    
+_Result:_ no optimization occurred since file was too small
 
 ### File Type Excluded
-I added the file type '.doc' to the list of extensions to exclude. I then created a 5MB .doc file, copied it two times on the volume, and ran a dedup job. Result: no optimization recorded since file type excluded.
+I added the file type '.doc' to the list of extensions to exclude. I then created a 5MB .doc file, copied it two times on the volume, and ran a dedup job.    
+_Result:_ no optimization occurred since file type was excluded.
 
 ### Different File Sizes Larger Than 32KB
-I copied a 5MB .txt file, copied it two times on the volume, and ran a dedu job. Result: 
+I copied a 5MB .txt file, copied it two times on the volume, and ran a dedup job.    
+_Result:_    
+- Saved space: 0 B -> 9.53 MB    
+- SavingsRate: 0 % -> 3%    
+- OptimizedFilescount: 0 -> 2    
+- OptimizedFilesSize: 9.54 MB    
+- OptimizedFilesSavingsRate: 99%    
+- InPolicyFilesCount: 2
 
 \<To do: add more testing info\>
 
