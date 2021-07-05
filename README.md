@@ -164,3 +164,8 @@ LastScrubbingResult                : 0x00000000
 LastScrubbingResultMessage         : The operation completed successfully.
 
 ````
+### Cleanup
+When you delete an optimized file from a data deduplication-enabled volume, its data chunks are not immediately deleted from the chunk store. Run a Garbage Collection job to reclaim those chunkd.
+````
+      Start-DedupJob -Type GarbageCollection -Volume <your volume>
+````
