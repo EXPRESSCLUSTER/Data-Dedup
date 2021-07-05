@@ -70,7 +70,7 @@ I added the file type '.doc' to the list of extensions to exclude. I then create
 _Result:_ no optimization occurred since file type was excluded.
 
 ### Different File Sizes Larger Than 32KB
-I copied a 5MB .txt file, copied it two times on the volume, and ran a dedup job.    
+I created a 5MB .txt file, copied it two times on the volume, and ran a dedup job.    
 _Result:_    
 - Saved space: 0 B -> 9.53 MB    
 - SavingsRate: 0 % -> 3%    
