@@ -1,5 +1,5 @@
 # Data Deduplication with EXPRESSCLUSTER X
-A file server often will have redundant files stored across its volume. Data Deduplication can optimize free space by identifying duplicated portions of a volume and optimizing redundancies. For a good overview of Data Deduplication, why it is useful, and when it can be used, please see this [Microsoft website](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/overview). Data Deduplication is available for Windows Server 2016 and Windows Server 2019 on NTFS volumes. This document looks at using Data Deduplication on an EXPRESSCLUSTER mirror disk and shared disk.    
+A file server often will have redundant files stored across its volume. Data Deduplication can optimize free space by identifying duplicated portions of a volume and optimizing redundancies. For a good overview of Data Deduplication, why it is useful, and when it can be used, please see this [Microsoft website](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/overview). Data Deduplication is available for Windows Server 2016 and Windows Server 2019 on NTFS volumes. Microsoft gives information about [Data Deduplication interoperability](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/interop) and what is supported and what is not supported. "Failover Clustering is fully supported, if every node in the cluster has the Data Deduplication feature installed." The document below looks at using Data Deduplication on an EXPRESSCLUSTER mirror disk and shared disk.    
 *\*Note that his is not a comprehensive document and only limited testing was performed.*
 
 ## Tested Environment
@@ -59,7 +59,7 @@ Note: More information on installing is [here](https://docs.microsoft.com/en-us/
    </p>
 
 ## Testing
-The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. **Files must be larger than 32KB to work**.
+The obvious method of testing is to copy a large file or files multiple times to the volume and then run data deduplication. All of these tests were run on a mirror disk and a shared disk. **Files must be larger than 32KB to work**.
 
 ### File Too Small
 I created 1K text file on the volume, copied it two times, and manually ran a dedup job.    
@@ -80,7 +80,7 @@ _Result:_
 - InPolicyFilesCount: 2
 
 ### Failover
-I failed over to the Standby server and checked the **Deduplication Rate** and **Deduplication Savings** in _File and Storage Services-\>Volumes_.    
+1. I failed over to the Standby server and checked the **Deduplication Rate** and **Deduplication Savings** in _File and Storage Services-\>Volumes_.    
 _Result:_ the numbers matched those on the Primary server.    
     
 I checked the output from _Get-DedupStatus | fl_    
@@ -90,10 +90,9 @@ Note: the **UsedSpace** and **UnOptimizedSize** don't always match up right afte
 I did a binary file compare of the two identical files I had copied to the volume.    
 _Result:_ no difference
     
-I copied another file twice to the volume and failed back to the Primary server    
+2. I copied another file twice to the volume and failed back to the Primary server    
 _Result:_ same results as if performing the test on the Primary server and failing over to the Secondary server.    
 
-\<To do: add more testing info\>
 
 ## PowerShell Commands
 
@@ -165,7 +164,7 @@ LastScrubbingResultMessage         : The operation completed successfully.
 
 ````
 ### Cleanup
-When you delete an optimized file from a data deduplication-enabled volume, its data chunks are not immediately deleted from the chunk store. Run a Garbage Collection job to reclaim those chunkd.
+When you delete an optimized file from a data deduplication-enabled volume, its data chunks are not immediately deleted from the chunk store. Run a Garbage Collection job to reclaim those chunks.
 ````
       Start-DedupJob -Type GarbageCollection -Volume <your volume>
 ````
