@@ -96,7 +96,7 @@ _Result:_ same results as if performing the test on the Primary server and faili
 
 ## PowerShell Commands
 
-Manually run data deduplication job:
+Manually run data deduplication job (if you don't want to wait on the schedule):
 ````
       PS C:\>Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 100 -Priority High
       
